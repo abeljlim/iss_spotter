@@ -14,7 +14,7 @@ const printPassTimes = function(passTimesArr) {
 nextISSTimesForMyLocation()
   .then(body => {
     printPassTimes(body); // callback returns undefined
-    return new Promise((resolve, reject) => reject(new Error("error message to catch"))); // works as intended - a new Promise has resolve and reject callbacks that can be used
+    return new Promise((resolve, reject) => reject(new Error("error message to catch"))); // works as intended - a new Promise passes in arguments to the callback function that are resolve and reject callbacks that can be used
     //reject(new Error("error message to catch")); // doesn't work because we need the reject or resolve to come from a Promise
   })
   .then(() => {
