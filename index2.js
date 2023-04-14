@@ -4,8 +4,8 @@ const { nextISSTimesForMyLocation } = require('./iss_promised');
 const printPassTimes = function(passTimesArr) {
   // success, print out the deets!
   for (const passTime of passTimesArr) {
-    const unix_timestamp = passTime.risetime;
-    const formattedTime = new Date(unix_timestamp * 1000);
+    const unixTimestamp = passTime.risetime;
+    const formattedTime = new Date(unixTimestamp * 1000);
 
     console.log(`Next pass at ${formattedTime} for ${passTime.duration} seconds!`);
   }
