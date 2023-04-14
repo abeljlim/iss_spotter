@@ -60,6 +60,7 @@ const fetchCoordsByIP = function(ip, callback) {
       return;
     }
 
+    // ES6 shorthand of: 
     // const latitude = data.latitude;
     // const longitude = data.longitude;
     const { latitude, longitude } = data;
