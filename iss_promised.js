@@ -1,8 +1,8 @@
 const request = require('request-promise-native');
-const srcURL = 'https://api.ipify.org/?format=json';
 
 // fetchMyIP function that returns a promise
 const fetchMyIP = function() {
+  const srcURL = 'https://api.ipify.org/?format=json';
   return request(srcURL);
 };
 
