@@ -8,9 +8,10 @@
  */
 const request = require('request');
 
-const srcURLForIP = 'https://api.ipify.org/?format=json';
 
 const fetchMyIP = function(callback) {
+  const srcURLForIP = 'https://api.ipify.org/?format=json';
+  
   // use request to fetch IP address from JSON API
   request(srcURLForIP, (error, response, body) => {
     // error can be set if invalid domain, user is offline, etc.
@@ -37,9 +38,9 @@ const fetchMyIP = function(callback) {
   });
 };
 
-const srcURLEndpointForCoords = `http://ipwho.is/`;
 
 const fetchCoordsByIP = function(ip, callback) {
+  const srcURLEndpointForCoords = `http://ipwho.is/`;
   const srcURL = `${srcURLEndpointForCoords}${ip}`;
   request(srcURL, (error, response, body) => {
     if (error) {
