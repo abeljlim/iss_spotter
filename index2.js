@@ -18,7 +18,7 @@ nextISSTimesForMyLocation()
     // return new Promise((resolve, reject) => reject(new Error("error message to catch"))); // works as intended - a new Promise passes in arguments to the callback function that are resolve and reject callbacks that can be used
     //reject(new Error("error message to catch")); // doesn't work because we need the reject or resolve to come from a Promise
 
-    // From watching "Syntax": If the value of the resolve callback is a Promise, then apparently that Promise is handled before going to the next "then(...)" callback
+    // From watching "Syntax" at https://web.compass.lighthouselabs.ca/days/w02e/activities/918: If the value of the resolve callback is a Promise, then apparently that Promise is handled before going to the next "then(...)" callback
     return new Promise((resolve, reject) => {
       console.log("before inner Promise resolution");
       resolve(new Promise((resolve, reject) => {
